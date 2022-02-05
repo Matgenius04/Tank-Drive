@@ -8,8 +8,8 @@ RobotContainer::RobotContainer()
     drive.SetDefaultCommand(frc2::RunCommand(
         [this] {
             drive.Drive(
-                pow(rightJoystick.GetX(), 3) / 2.0,
-                pow(leftJoystick.GetY(), 3) / 2.0,
+                rightJoystick.GetX() / 2.0,
+                pow(leftJoystick.GetY(), 2.5) * 0.75,
                 DriveType::Curvature // can also switch to arcade
             );
         }, 
